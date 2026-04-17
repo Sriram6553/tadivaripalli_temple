@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>తాడివారిపల్లి గ్రామం</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Mandali&display=swap');
+
+:root {
+    --emerald: #014421; /* Deep Emerald Green */
+    --saffron: #FF9933; /* Sacred Saffron */
+    --sandalwood: #FDF5E6; /* Old Lace / Sandalwood tint */
+    --gold-text: #FFD700;
+}
+
+body {
+    margin: 0;
+    font-family: 'Mandali', sans-serif;
+    background-color: var(--sandalwood);
+    background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+    color: #2c3e50;
+    scroll-behavior: smooth;
+}
+
+header {
+    text-align: center;
+    padding: 130px 20px;
+    position: relative;
+    color: var(--gold-text);
+    background: linear-gradient(rgba(1, 68, 33, 0.85), rgba(1, 68, 33, 0.7)), 
+                url('https://jetuk.org/wp-content/uploads/2016/05/tirumeni.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: var(--emerald);
+    border-bottom: 6px solid var(--saffron);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+header h1 {
+    font-size: 55px;
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+header p {
+    font-size: 24px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: var(--emerald);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid var(--saffron);
+}
+
+nav a {
+    color: white;
+    padding: 18px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: var(--saffron);
+    color: var(--emerald);
+}
+
+.section {
+    display: none;
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+    animation: slideUp 0.8s ease-out;
+}
+
+.active { display: block; }
+
+.card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #e0e0e0;
+    border-left: 10px solid var(--saffron);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.card h2 { 
+    color: var(--emerald); 
+    border-bottom: 2px solid var(--sandalwood);
+    padding-bottom: 15px;
+    margin-top: 0;
+}
+
+/* New Progress Bar Colors */
+.progress-container {
+    background-color: #f0f0f0;
+    border-radius: 25px;
+    margin: 25px 0;
+    height: 30px;
+    border: 1px solid #ddd;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, var(--emerald), #2ecc71);
+    height: 100%;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    font-weight: bold;
+    width: 70%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.custom-table thead th {
+    background: var(--emerald);
+    color: var(--saffron);
+    padding: 18px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.custom-table td {
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.custom-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.btn {
+    background: var(--saffron);
+    color: var(--emerald);
+    padding: 15px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+    border: 2px solid var(--saffron);
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--saffron);
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background: var(--emerald);
+    color: white;
+    margin-top: 60px;
+    border-top: 5px solid var(--saffron);
+}
+
+.bank-info {
+    background: #f4fbf7;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px dashed var(--emerald);
+}
+</style>
+
+<script>
+function showSection(id) {
+    let sections = document.querySelectorAll('.section');
+    sections.forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
+
+</head>
+<body>
+
+<header>
+    <h1>తాడివారిపల్లి గ్రామం</h1>
+    <p>🌿 శాంతి - ధర్మం - అభివృద్ధి 🌿</p>
+</header>
+
+<nav>
+    <a onclick="showSection('home')">హోమ్</a>
+    <a onclick="showSection('temple')">రామ మందిరం</a>
+    <a onclick="showSection('anjaneya')">ఆంజనేయ స్వామి</a>
+    <a onclick="showSection('donation')">విరాళం</a>
+</nav>
+
+<div id="home" class="section active">
+    <div class="card">
+        <h2>స్వాగతం</h2>
+        <p>తాడివారిపల్లి గ్రామానికి స్వాగతం. ప్రకృతి ఒడిలో, దైవ చింతనతో మన గ్రామాన్ని ఆదర్శంగా తీర్చిదిద్దుకుందాం.</p>
+    </div>
+</div>
+
+<div id="temple" class="section">
+    <div class="card">
+        <h2>🙏 శ్రీ రామ మందిర పురోగతి</h2>
+        <p>శ్రీ సీతారామ చంద్రస్వామి వారి కృపతో మన ఆలయ నిర్మాణం శరవేగంగా సాగుతోంది.</p>
+        
+        <div class="progress-container">
+            <div class="progress-bar">70% పూర్తి అయ్యింది</div>
+        </div>
+
+        <p style="white-space: pre-line;">గ్రామస్తులందరి సహకారంతో ఈ ధర్మకార్యం త్వరలోనే పూర్తవుతుందని ఆశిస్తున్నాము.
+
+        రామాలయం నిర్మాణం – గ్రామానికి గౌరవం, తరాలకు ధర్మం.
+        
+        రామాయ రామభద్రాయ రామచంద్రాయ వేధసే |
+        రఘునాథాయ నాథాయ సీతాయాః పతయే నమః ||
+        
+        🙏 జై శ్రీరామ్ 🙏</p>
+    </div>
+</div>
+
+<div id="anjaneya" class="section">
+    <div class="card">
+        <h2>శ్రీ శ్రీశ్రీ అనంతరాయుడు ఆంజనేయ స్వామి వారి ఆలయం</h2>
+        <p>మన గ్రామాన్ని రక్షించే ఆంజనేయ స్వామి వారి దివ్య క్షేత్రం.</p>
+   <div class="image-wrapper">
+           <img src="https://i.ibb.co/5hjkqYkn/Whats-App-Image-2026-04-17-at-9-48-24-PM.jpg" class="temple-img" alt="శ్రీ ఆంజనేయ స్వామి">
+        </div>
+    </div>
+</div>
+
+<div id="donation" class="section">
+    <div class="card">
+        <h2>శ్రీశ్రీశ్రీ సీతారామచంద్ర స్వామి వారి ఆలయ నిర్మాణ విరాళాలు</h2>
+        <p>ఈ మహాత్కార్యంలో భాగస్వాములు కావాలనుకునే దాతలు ఈ క్రింది వివరాలను సంప్రదించగలరు:</p>
+        <div class="bank-info">
+            <p style="margin: 8px 0; font-size: 18px;">బ్యాంక్: <b>APGB Bank</b></p>
+            <p style="margin: 8px 0; font-size: 18px;">ఖాతా సంఖ్య: <b>575710048459362</b></p>
+            <p style="margin: 8px 0; font-size: 18px;">IFSC కోడ్: <b>UBIN0CG7999</b></p>
+        </div>
+        <a href="#" class="btn">విరాళం అందించండి (Donate)</a>
+    </div>
+
+    <h2 style="text-align:center; color:var(--emerald); margin-top:50px;">శ్రీ రామ కార్య దాతలు</h2>
+    <table class="custom-table">
+        <thead>
+            <tr>
+                <th>వరుస సంఖ్య</th>
+                <th>దాత పేరు</th>
+                <th>మొత్తం (₹)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>తాడి రఘురామిరెడ్డి S/O రామాంజనేయరెడ్డి</td><td>1,50,000</td></tr>
+            <tr><td>2</td><td>మేకల చిన్నకొండా రెడ్డి S/O వెంకట కొండారెడ్డి</td><td>1,00,000</td></tr>
+            <tr><td>3</td><td>దారెడ్డి శేఖర్ రెడ్డి S/O పెద్ది రెడ్డి</td><td>1,00,000</td></tr>
+            <tr><td>4</td><td>తాడి నారాయణరెడ్డి S/O పెద్ద కొండా రెడ్డి</td><td>60,000</td></tr>
+            <tr><td>5</td><td>శ్రీరామకవచం ప్రసాద్ శర్మ S/O రామయ్య శర్మ</td><td>51,116</td></tr>
+            <tr><td>6</td><td>A V S నిఖిల్ కుమార్ S/O మల్లికార్జున ఆచారి</td><td>50,000</td></tr>
+            <tr><td>7</td><td>మందా వెంకట రామిరెడ్డి S/O చిన్న వెంకటేశ్వర రెడ్డి</td><td>50,000</td></tr>
+            <tr><td>8</td><td>నల్లబోతుల శ్రీను S/O లక్ష్మయ్య</td><td>50,000</td></tr>
+            <tr><td>9</td><td>రామినేని వెంకటేశ్వర్లు S/O పాపయ్య</td><td>50,000</td></tr>
+            <tr><td>10</td><td>Sk బాషా గారు - ముగ్గురాయి గని - దర్శి</td><td>50,000</td></tr>
+       <tr><td>11</td><td>శ్రీరామకవచం నంద కిషోర్</td><td>30,000</td></tr>
+            <tr><td>12</td><td>రొడ్డా రమణయ్య S/O చిన్నన్న</td><td>25,016</td></tr>
+            <tr><td>13</td><td>పోలేపల్లి పరబ్రహ్మం ఆచారి S/O నాగరత్న ఆచారి</td><td>20,000</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<footer>
+    <p>© 2026 తాడివారిపల్లి గ్రామం | లోకాః సమస్తాః సుఖినోభవంతు</p>
+</footer>
+
+</body>
+</html>
